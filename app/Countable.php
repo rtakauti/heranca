@@ -5,23 +5,30 @@ namespace Animal;
 
 trait Countable
 {
-    public static $quantidade = 0;
-
     public function __construct()
     {
         ++self::$quantidade;
-        if (__CLASS__ !== 'Animal\Animal') {
-            parent::__construct();
-        }
-
-        if (__CLASS__ === 'Animal\Animal') {
-            ++static::$quantidade;
-        }
-
+        get_parent_class(__CLASS__)
+            ? parent::__construct()
+            : ++static::$quantidade;
         foreach (class_uses(self::class) as $trait) {
+            if (method_exists($trait, 'initialize')) {
+                $trait::initialize(__CLASS__);
+            }
+        }
+    }
+
+    public static function initialize($class)
+    {
+        foreach (class_uses($class) as $trait) {
             if ($trait !== __TRAIT__) {
                 ++$trait::$quantidade;
             }
         }
+    }
+
+    public static function getQuantidade()
+    {
+        return static::$quantidade;
     }
 }
