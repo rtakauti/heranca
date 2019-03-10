@@ -2,9 +2,10 @@
 
 namespace Animal;
 
-class Lobo extends Canino
+abstract class Felino extends Mamifero
 {
-    use Contavel, Selvagem;
+    use Contavel;
 
     public static $quantidade = 0;
+
 }

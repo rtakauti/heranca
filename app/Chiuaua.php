@@ -2,9 +2,9 @@
 
 namespace Animal;
 
-class Lobo extends Canino
+class Chiuaua extends Cachorro
 {
-    use Contavel, Selvagem;
+    use Contavel;
 
     public static $quantidade = 0;
 }

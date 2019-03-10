@@ -2,12 +2,9 @@
 
 namespace Animal;
 
-
-require_once 'Countable.php';
-
 abstract class Canino extends Mamifero
 {
-    use Countable;
+    use Contavel;
 
     public static $quantidade = 0;
 

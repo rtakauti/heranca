@@ -2,8 +2,7 @@
 
 namespace Animal;
 
-
 trait Vertebrado
 {
-    public static $quantidade = 0;
+    public static $quantidade_vertebrado = 0;
 }

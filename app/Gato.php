@@ -2,7 +2,9 @@
 
 namespace Animal;
 
-class Gato extends Mamifero
+class Gato extends Felino
 {
+    use Contavel;
+
     public static $quantidade = 0;
 }
