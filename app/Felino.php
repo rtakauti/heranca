@@ -2,9 +2,8 @@
 
 namespace Animal;
 
-abstract class Animal
+abstract class Felino extends Mamifero
 {
     use Contavel;
 
 }
-

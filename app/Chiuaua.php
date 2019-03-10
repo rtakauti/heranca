@@ -2,9 +2,8 @@
 
 namespace Animal;
 
-abstract class Animal
+class Chiuaua extends Cachorro
 {
     use Contavel;
 
 }
-

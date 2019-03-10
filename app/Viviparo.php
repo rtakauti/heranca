@@ -2,8 +2,7 @@
 
 namespace Animal;
 
-
 trait Viviparo
 {
-    public static $quantidade = 0;
+    public static $quantidade_viviparo = 0;
 }
