@@ -2,25 +2,24 @@
 
 namespace Animal;
 
-include 'vendor/autoload.php';
+spl_autoload_register(function ($class) {
+    include_once 'app' . DIRECTORY_SEPARATOR . str_replace(__NAMESPACE__ . '\\', '', $class) . '.php';
+});
 
-new Cachorro();
-new Cachorro();
-new Cachorro();
-new Chiuaua();
-new Lobo();
-new Lobo();
-new Lobo();
-new Gato();
+new Dog();
+new Dog();
+new Dog();
+new Wolf();
+new Wolf();
+new Cat();
 
-echo 'animal ' . Animal::getQuantidade() . PHP_EOL;
-echo 'mamifero ' . Mamifero::getQuantidade() . PHP_EOL;
-echo 'vertebrado ' . Vertebrado::$quantidade_vertebrado . PHP_EOL;
-echo 'viviparo ' . Viviparo::$quantidade_viviparo . PHP_EOL;
-echo 'canino ' . Canino::getQuantidade() . PHP_EOL;
-echo 'felino ' . Felino::getQuantidade() . PHP_EOL;
-echo 'selvagem ' . Selvagem::$quantidade_selvagem . PHP_EOL;
-echo 'cachorro ' . Cachorro::getQuantidade() . PHP_EOL;
-echo 'chiuaua ' . Chiuaua::getQuantidade() . PHP_EOL;
-echo 'lobo ' . Lobo::getQuantidade() . PHP_EOL;
-echo 'gato ' . Gato::getQuantidade() . PHP_EOL;
+echo 'animal ' . Animal::getQuantity() . PHP_EOL;
+echo 'mamifero ' . Mammal::getQuantity() . PHP_EOL;
+echo 'vertebrado ' . Vertebrate::$quantity_vertebrate . PHP_EOL;
+echo 'viviparo ' . Viviparous::$quantity_viviparous . PHP_EOL;
+echo 'canino ' . Canine::getQuantity() . PHP_EOL;
+echo 'felino ' . Feline::getQuantity() . PHP_EOL;
+echo 'selvagem ' . Wild::$quantity_wild . PHP_EOL;
+echo 'cachorro ' . Dog::getQuantity() . PHP_EOL;
+echo 'lobo ' . Wolf::getQuantity() . PHP_EOL;
+echo 'gato ' . Cat::getQuantity() . PHP_EOL;

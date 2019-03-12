@@ -1,0 +1,10 @@
+{
+    "name": "rtakauti/heranca",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Animal\\": "app"
+        }
+    }
+}
