@@ -2,10 +2,7 @@
 
 namespace Animal;
 
-spl_autoload_register(function ($class) {
-    $file = 'app' . DIRECTORY_SEPARATOR . array_pop(explode('\\', $class)) . '.php';
-    include $file;
-});
+include 'vendor/autoload.php';
 
 new Cachorro();
 new Cachorro();
