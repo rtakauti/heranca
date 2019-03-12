@@ -6,19 +6,20 @@ spl_autoload_register(function ($class) {
     include_once 'app' . DIRECTORY_SEPARATOR . str_replace(__NAMESPACE__ . '\\', '', $class) . '.php';
 });
 
-new Cachorro();
-new Cachorro();
-new Cachorro();
-new Lobo();
-new Lobo();
-new Lobo();
-new Gato();
+new Dog();
+new Dog();
+new Dog();
+new Wolf();
+new Wolf();
+new Cat();
 
-echo 'animal ' . Animal::$quantidade . PHP_EOL;
-echo 'mamifero ' . Mamifero::$quantidade . PHP_EOL;
-echo 'vertebrado ' . Vertebrado::$quantidade . PHP_EOL;
-echo 'viviparo ' . Viviparo::$quantidade . PHP_EOL;
-echo 'canino ' . Canino::$quantidade . PHP_EOL;
-echo 'cachorro ' . Cachorro::getQuantidade() . PHP_EOL;
-echo 'lobo ' . Lobo::getQuantidade() . PHP_EOL;
-echo 'gato ' . Gato::getQuantidade() . PHP_EOL;
+echo 'animal ' . Animal::getQuantity() . PHP_EOL;
+echo 'mamifero ' . Mammal::getQuantity() . PHP_EOL;
+echo 'vertebrado ' . Vertebrate::$quantity_vertebrate . PHP_EOL;
+echo 'viviparo ' . Viviparous::$quantity_viviparous . PHP_EOL;
+echo 'canino ' . Canine::getQuantity() . PHP_EOL;
+echo 'felino ' . Feline::getQuantity() . PHP_EOL;
+echo 'selvagem ' . Wild::$quantity_wild . PHP_EOL;
+echo 'cachorro ' . Dog::getQuantity() . PHP_EOL;
+echo 'lobo ' . Wolf::getQuantity() . PHP_EOL;
+echo 'gato ' . Cat::getQuantity() . PHP_EOL;

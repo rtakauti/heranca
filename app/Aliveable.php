@@ -5,5 +5,5 @@ namespace Animal;
 
 trait Aliveable
 {
-    private $alive = true;
+    public $alive = true;
 }
